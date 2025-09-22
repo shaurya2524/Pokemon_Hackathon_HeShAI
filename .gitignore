@@ -1,0 +1,14 @@
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.webp
+*.json
+*.csv
+*.txt
+*.pt
+*.pth
+*.yaml
+*.cache
