@@ -5,9 +5,9 @@ from ultralytics import YOLO
 
 # --- CONFIG ---
 weights_path = "/home/shaurya/Downloads/yolov8n_pokemon_more_scenes/kaggle/working/runs/detect/yolov8n_pokemon/weights/best.pt"   # your pretrained YOLO weights
-images_dir = "/home/shaurya/HACKATHON_2/test_images/the-poke-war-hackathon-ai-guild-recuritment-hack/test_images"           # folder with images
-json_file = "/home/shaurya/HACKATHON_2/test_images/zeroshot_roberta_predictions.json"      # mapping file
-output_csv = "pokemon_pretrained_roberta_more_scenes_0.25.csv"       # final CSV file
+images_dir = "/home/shaurya/Pokemon_HACK/test_images/the-poke-war-hackathon-ai-guild-recuritment-hack/test_images"           # folder with images
+json_file = "/home/shaurya/Downloads/longformer_prediction_30(1).json"      # mapping file
+output_csv = "pokemon_trained_longformer_more_scenes_0.25.csv"       # final CSV file
 
 model = YOLO(weights_path)
 
@@ -19,6 +19,7 @@ rows = []
 
 for image_name, target_pokemon in mappings.items():
     image_path = os.path.join(images_dir, image_name)
+    # breakpoint()
     if not os.path.exists(image_path):
         print(f"Skipping missing image: {image_name}")
         continue
